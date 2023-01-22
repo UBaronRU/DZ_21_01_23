@@ -1,11 +1,16 @@
 ﻿//## Primer_13
 //В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
-double [] array = {-1.2,1.76,-8.0,9.5,12.14,-13.6,2.1,-5.1,12.5,-9.4};
+double [] array = new double[new Random().Next(2,10)];
 int Len = 0;
 double Kol_max = 0;
 double Kol_min = 0;
 double Delta = 0;
 Len = array.Length;
+for (int i = 0; i < Len; i++)
+{
+    array[i] = new Random().NextDouble()*125;
+    Console.WriteLine("Элемент массива №" + i + " из "+ Len +" -> "+array[i]);
+}
 Kol_max = array[0];
 Kol_min = array[0];
 for (int i = 0; i < Len; i++)
